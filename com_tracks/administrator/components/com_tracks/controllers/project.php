@@ -213,5 +213,16 @@ class TracksControllerProject extends BaseController
 		$msg = 'New ordering saved';
 		$this->setRedirect( 'index.php?option=com_tracks', $msg );
 	}
+	
+	
+	function sampledata()
+	{
+		try {
+			$res = TracksHelper::sampledata();
+			$this->setRedirect('index.php?option=com_tracks', JText::_('COM_TRACKS_SAMPLEDATA_SUCCESS'));
+		}
+		catch (Exception $e) {
+			$this->setRedirect('index.php?option=com_tracks', $e->getMessage(), 'error');
+		}
+	}
 }
-?>
