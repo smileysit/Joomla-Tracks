@@ -49,8 +49,8 @@ class TracksToolbar extends FOFToolbar
 		// Set toolbar items for the page
 		JToolBarHelper::title(JText::_('COM_TRACKS'), 'tracks');
 
-		JToolBarHelper::addNewX();
-		JToolBarHelper::editListX();
+		JToolBarHelper::addNew();
+		JToolBarHelper::editList();
 		JToolBarHelper::deleteList(JText::_('COM_TRACKS_DELETEPROJECTSCONFIRM'));
 		JToolBarHelper::publishList();
 		JToolBarHelper::unpublishList();
@@ -64,8 +64,8 @@ class TracksToolbar extends FOFToolbar
 
 		JToolBarHelper::back();
 		JToolBarHelper::deleteList(JText::_('COM_TRACKS_DELETEPROJECTINDIVIDUALCONFIRM'));
-		JToolBarHelper::editListX();
-		JToolBarHelper::addNewX();
+		JToolBarHelper::editList();
+		JToolBarHelper::addNew();
 	}
 
 	public function onIndividualsBrowse()
@@ -73,8 +73,8 @@ class TracksToolbar extends FOFToolbar
 		JToolBarHelper::title(JText::_('COM_TRACKS_Individuals'), 'tracks' );
 
 		JToolBarHelper::deleteList();
-		JToolBarHelper::editListX();
-		JToolBarHelper::addNewX();
+		JToolBarHelper::editList();
+		JToolBarHelper::addNew();
 		JToolBarHelper::assign();
 	}
 
@@ -90,8 +90,8 @@ class TracksToolbar extends FOFToolbar
 	{
 		JToolBarHelper::title(JText::_('COM_TRACKS') . ' &ndash; ' . JText::_('COM_TRACKS_TEAMS' ), 'tracks');
 
-		JToolBarHelper::addNewX();
-		JToolBarHelper::editListX();
+		JToolBarHelper::addNew();
+		JToolBarHelper::editList();
 		JToolBarHelper::deleteList();
 	}
 
@@ -99,8 +99,8 @@ class TracksToolbar extends FOFToolbar
 	{
 		JToolBarHelper::title(JText::_('COM_TRACKS') . ' &ndash; ' . JText::_('COM_TRACKS_SUBROUND_TYPES' ), 'tracks');
 
-		JToolBarHelper::addNewX();
-		JToolBarHelper::editListX();
+		JToolBarHelper::addNew();
+		JToolBarHelper::editList();
 		JToolBarHelper::deleteList();
 	}
 
@@ -108,8 +108,8 @@ class TracksToolbar extends FOFToolbar
 	{
 		JToolBarHelper::title(JText::_('COM_TRACKS') . ' &ndash; ' . JText::_('COM_TRACKS_RESULTS' ), 'tracks');
 
-		JToolBarHelper::addNewX();
-		JToolBarHelper::editListX();
+		JToolBarHelper::addNew();
+		JToolBarHelper::editList();
 		JToolBarHelper::save( 'saveranks', 'Save' );
 		JToolBarHelper::custom('addall', 'default', 'default', JText::_('COM_TRACKS_Add_all'), false);
 		JToolBarHelper::deleteList();
@@ -120,8 +120,8 @@ class TracksToolbar extends FOFToolbar
 	{
 		JToolBarHelper::title(   JText::_('COM_TRACKS_Project_Rounds' ), 'tracks' );
 
-		JToolBarHelper::addNewX();
-		JToolBarHelper::editListX();
+		JToolBarHelper::addNew();
+		JToolBarHelper::editList();
 		JToolBarHelper::customX( 'copy', 'copy.png', 'copy_f2.png', JText::_('COM_TRACKS_COPY'), true );
 		JToolBarHelper::publish();
 		JToolBarHelper::unpublish();
@@ -134,6 +134,13 @@ class TracksToolbar extends FOFToolbar
 		JToolBarHelper::title(JText::_('COM_TRACKS_PROJECT_ROUNDS_COPY'), 'tracks' );
 
 		JToolBarHelper::save('savecopy', 'Save');
+		JToolBarHelper::back();
+	}
+
+	public function onAboutAdd()
+	{
+		JToolBarHelper::title(JText::_('COM_TRACKS_About_Tracks'), 'tracks' );
+
 		JToolBarHelper::back();
 	}
 }

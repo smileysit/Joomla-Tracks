@@ -200,13 +200,3 @@ CREATE TABLE IF NOT EXISTS `#__tracks_rounds_results` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `pr_ind` (`individual_id`,`subround_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
-CREATE TABLE IF NOT EXISTS `#__tracks_project_settings` (
-  `id` int(11) NOT NULL auto_increment,
-  `project_id` int(11) NOT NULL,
-  `xml` varchar(50) NOT NULL DEFAULT '',
-  `settings` text NULL,
-  `checked_out` int(11) NOT NULL,
-  `checked_out_time` datetime NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

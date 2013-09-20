@@ -37,7 +37,7 @@ class TracksTableProject extends FOFTable
 		parent::__construct('#__tracks_projects', 'id', $db);
 	}
 
-	function onAfterBind($src)
+	function onAfterBind(&$src)
 	{
 		// If the source value is an object, get its accessible properties.
 		if (is_object($src))
@@ -100,7 +100,7 @@ class TracksTableProject extends FOFTable
 	 *
 	 * @return bool
 	 */
-	protected function onAfterLoad($result)
+	protected function onAfterLoad(&$result)
 	{
 		parent::onAfterLoad($result);
 

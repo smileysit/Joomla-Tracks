@@ -29,4 +29,10 @@ class TracksDispatcher extends FOFDispatcher
 
 		return true;
 	}
+
+	protected function getTask($view)
+	{
+		$task = parent::getTask($view);
+		return $task;
+	}
 }

@@ -44,5 +44,4 @@ defined('_JEXEC') or die('Restricted access'); ?>
 	</tr>
 </table>
 
-Quickadd feature provided thanks to <a href="http://digitarald.de/project/autocompleter">digitarald.de</a>
 </div>

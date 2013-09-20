@@ -45,4 +45,9 @@ class TracksControllerMenu extends FOFController
 		$msg = JText::_('COM_TRACKS_PROJECT_SELECTED');
 		$this->setRedirect($app->input->getString('referer', ''), $msg);
 	}
+
+	public function read()
+	{
+		$this->display();
+	}
 }

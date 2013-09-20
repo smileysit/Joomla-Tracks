@@ -15,7 +15,6 @@
 defined('_JEXEC') or die();
 
 jimport('joomla.application.component.model');
-require_once (JPATH_COMPONENT.DS.'models'.DS.'list.php');
 
 /**
  * Joomla Tracks Component subround types Model
